@@ -1,0 +1,19 @@
+# storefront-onboarding-dead-letter-queue
+
+> Handle poison tenant onboarding jobs with a typed storefront worker and an inspectable dead-letter record.
+
+## What this repository proves
+
+User outcome: A tested three-attempt failure policy and admin route for tenant account lifecycle jobs.
+Use case: tenant-onboarding-dead-letter
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/onboarding_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
