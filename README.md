@@ -62,3 +62,7 @@ Above is the happy path. The production checklist: The details below apply to St
 **Storefront Onboarding Dead Letter Queue: Scheduled / background work**
 - **Storefront Onboarding Dead Letter Queue:** Server-side jobs keep running and **consuming credit** — monitor `GET /v1/account/usage` and set an auto-recharge threshold.
 - **Storefront Onboarding Dead Letter Queue:** Make handlers idempotent and use the queue's ack/retry so a redelivery doesn't double-process.
+
+## Further reading
+
+- [How to Handle Failed Node.js Background Tasks: Dead-Letter Queue Retry Explained](docs/how-to-handle-failed-node-js-background-tasks-dea-ceymz2.md)
